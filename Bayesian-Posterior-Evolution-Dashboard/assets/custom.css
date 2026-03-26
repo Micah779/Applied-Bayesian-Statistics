@@ -1,0 +1,66 @@
+/* ── Dash design tokens (Orbit Navy / Electric Blue) ─────────────────── */
+:root {
+    --Dash-Text-Strong: #E2E8F0;
+    --Dash-Text-Weak: #8899B4;
+    --Dash-Text-Disabled: #556680;
+    --Dash-Fill-Inverse-Strong: #111A33;
+    --Dash-Fill-Interactive-Strong: #0066FF;
+    --Dash-Fill-Interactive-Weak: #0A1024;
+    --Dash-Fill-Disabled: #1C2747;
+    --Dash-Shading-Strong: #1C2747;
+    --Dash-Shading-Weak: #111A33;
+    --Dash-Stroke-Strong: #1C2747;
+}
+
+/* ── Dropdown extra overrides ───────────────────────────────────────── */
+.dash-dropdown-options {
+    background-color: #111A33 !important;
+    border-color: #1C2747 !important;
+}
+.dash-dropdown-option:hover,
+.dash-dropdown-option[aria-selected="true"] {
+    background-color: #1C2747 !important;
+}
+.dash-dropdown-search input {
+    caret-color: #E2E8F0 !important;
+}
+
+/* ── Slider tooltip ─────────────────────────────────────────────────── */
+.dash-slider-tooltip {
+    background-color: #111A33 !important;
+    color: #E2E8F0 !important;
+    border: 1px solid #1C2747 !important;
+    border-radius: 6px !important;
+    padding: 2px 8px !important;
+    font-size: 0.82rem !important;
+    font-weight: 600 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* ── Viewport fill layout ──────────────────────────────────────────── */
+html, body { margin: 0; padding: 0; overflow: hidden; height: 100vh; }
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 1rem 1.5rem;
+    box-sizing: border-box;
+}
+.main-row { flex: 1; min-height: 0; }
+.right-col {
+    display: flex !important;
+    flex-direction: column;
+    height: 100%;
+}
+.chart-card { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.chart-card .card-body { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.chart-card .dash-graph { flex: 1; min-height: 0; }
+.chart-card .js-plotly-plot, .chart-card .plot-container { height: 100% !important; }
+
+/* ── Stat cards ─────────────────────────────────────────────────────── */
+.stat-value { white-space: nowrap; }
+
+/* ── Buttons ────────────────────────────────────────────────────────── */
+.btn-flip:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0, 102, 255, 0.40); }
+.btn-flip:active { transform: translateY(0); }
+.btn-flip, .btn-reset { transition: all 0.15s ease; }
